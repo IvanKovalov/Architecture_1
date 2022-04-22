@@ -17,7 +17,7 @@ func main() {
 	r.Get("/time", func(w http.ResponseWriter, r *http.Request) {
 		data := Date{time.Now()}
 		js, _ := json.Marshal(data)
-		//w.Write(js)
+		w.Write(js)
 	})
 	http.ListenAndServe(":8795", r)
 }
