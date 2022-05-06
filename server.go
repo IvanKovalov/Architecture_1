@@ -9,7 +9,7 @@ import (
 )
 
 type Date struct {
-	Hour time.Time `json:"поточний час"`
+	Hour time.Time `json:"Поточний час"`
 }
 
 func main() {
@@ -17,7 +17,6 @@ func main() {
 	r.Get("/time", func(w http.ResponseWriter, r *http.Request) {
 		data := Date{time.Now()}
 		js, _ := json.Marshal(data)
-		//w.Write(js)
 	})
 	http.ListenAndServe(":8795", r)
 }
