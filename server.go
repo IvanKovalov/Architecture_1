@@ -9,7 +9,7 @@ import (
 )
 
 type Date struct {
-	Hour time.Time `json:"поточний час"`
+	Hour time.Time `json:"Поточний час"`
 }
 
 func main() {
